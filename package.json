@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tailwindcss -i ./src/css/custom.css -o ./src/css/styles.css --watch"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/suzon-ahmmed/coading-structure/issues"
   },
-  "homepage": "https://github.com/suzon-ahmmed/coading-structure#readme"
+  "homepage": "https://github.com/suzon-ahmmed/coading-structure#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.23"
+  }
 }
