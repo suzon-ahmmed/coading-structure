@@ -86,115 +86,223 @@
                   </div>
                </div>
                <div class="col-span-9 lg:col-span-6">
-                  <div class="my-4">
+                  <div class="my-4" id="installation">
                      <div class="text-2xl font-bold pb-6 border-b border-gray-300 mb-6">A) Installation</div>
                      <p class="text-sm">When you only need to include VueStudio compiled CSS or JS, below is the
                         required core css and javascript.</p>
                      <pre>
-                        <code class="rounded">
-&lt;-- core css --&gt;
-&lt;link href=&quot;assets/css/vendor.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
-&lt;link href=&quot;assets/css/app.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+                        <code class="rounded"> &lt;-- core css --&gt;
+ &lt;link href=&quot;assets/css/vendor.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+ &lt;link href=&quot;assets/css/app.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
  
-&lt;-- core js --&gt;
-&lt;script src=&quot;assets/js/vendor.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;assets/js/app.min.js&quot;&gt;&lt;/script&gt;
+ &lt;-- core js --&gt;
+ &lt;script src=&quot;assets/js/vendor.min.js&quot;&gt;&lt;/script&gt;
+ &lt;script src=&quot;assets/js/app.min.js&quot;&gt;&lt;/script&gt;
                         </code>
                      </pre>
+                     <div class="text-bse font-bold">OR</div>
+                     <p class="text-sm">If you wish to configure the scss files settings, follow the following step to
+                        install <span class="bg-gray-100 border border-gray-200 text-red-700 px-1 rounded">gulp</span>
+                        in your operating system.
+                        You may refer to their official documentation for how to setup the development environment.</p>
+                     <pre>
+                           <code class="rounded"> cd /your-path-url/template_html/
+ npm install 
+ gulp
+ 
+ // gulp command to generate plugins files
+ gulp plugins</code>
+                        </pre>
+                     <p>Make sure that you are running at least node <span
+                           class="bg-gray-100 border border-gray-200 text-red-700 px-1 rounded">6.9.x</span> and <span
+                           class="bg-gray-100 border border-gray-200 text-red-700 px-1 rounded">npm 3.x.x</span> by
+                        running <span class="bg-gray-100 border border-gray-200 text-red-700 px-1 rounded">node
+                           -v</span> and <span class="bg-gray-100 border border-gray-200 text-red-700 px-1 rounded">npm
+                           -v</span> in a terminal/console window. Older versions produce errors, but newer versions are
+                        fine.</p>
                   </div>
-                  <div class="my-4">
+                  <div class="my-4" id="file-structure">
                      <div class="text-2xl font-bold pb-6 border-b border-gray-300 mb-6">B) File Structure</div>
                      <p class="text-sm">File structure overview for VueStudio.</p>
                      <pre>
-                        <code class="rounded">
-template/
-├── dist/             // generated html / css / js files
-├── gulpfile.js       // gulp settings
-├── package.json      // npm package installed
-└── src/
-    ├── html/         // html source files
-    ├── img/          // image source files
-    ├── js/           // javascript source files
-    └── scss/         // VueStudio scss files
+                        <code class="rounded"> template/
+ ├── dist/             // generated html / css / js files
+ ├── gulpfile.js       // gulp settings
+ ├── package.json      // npm package installed
+ └── src/
+     ├── html/         // html source files
+     ├── img/          // image source files
+     ├── js/           // javascript source files
+     └── scss/         // VueStudio scss files
                         </code>
                      </pre>
                   </div>
                   <div class="my-4">
                      <div class="text-2xl font-bold pb-6 border-b border-gray-300 mb-6">C) HTML Structure</div>
-                     <p class="text-sm">Below is the general page structure and the required core css / js files for VueStudio Admin Template. The css / js files can be found via /dist/assets/ folder.</p>
-           <pre>
-              <code class="rounded">
-&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot; /&gt;
-  &lt;title&gt;VueStudio&lt;/title&gt;
-  &lt;meta content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; 
+                     <p class="text-sm">Below is the general page structure and the required core css / js files for
+                        VueStudio Admin Template. The css / js files can be found via <span
+                           class="bg-gray-100 border border-gray-200 text-red-700 px-1 rounded">/dist/assets/</span>
+                        folder.</p>
+                     <pre>
+              <code class="rounded"> &lt;!DOCTYPE html&gt;
+ &lt;html lang=&quot;en&quot;&gt;
+ &lt;head&gt;
+   &lt;meta charset=&quot;utf-8&quot; /&gt;
+   &lt;title&gt;VueStudio&lt;/title&gt;
+   &lt;meta content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; 
         name=&quot;viewport&quot; /&gt;
  
-  &lt;!-- core-css --&gt;
-  &lt;link href=&quot;assets/css/vendor.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
-  &lt;link href=&quot;assets/css/app.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div id=&quot;app&quot; class=&quot;app&quot;&gt;
+   &lt;!-- core-css --&gt;
+   &lt;link href=&quot;assets/css/vendor.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+   &lt;link href=&quot;assets/css/app.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+   &lt;div id=&quot;app&quot; class=&quot;app&quot;&gt;
     &lt;!-- app-header --&gt;
     &lt;div id=&quot;header&quot; class=&quot;app-header&quot;&gt;... &lt;/div&gt;
     
-    &lt;!-- app-sidebar --&gt;
-    &lt;div id=&quot;sidebar&quot; class=&quot;app-sidebar&quot;&gt;... &lt;/div&gt;
+     &lt;!-- app-sidebar --&gt;
+     &lt;div id=&quot;sidebar&quot; class=&quot;app-sidebar&quot;&gt;... &lt;/div&gt;
     
-    &lt;!-- app-content --&gt;
-    &lt;div id=&quot;content&quot; class=&quot;app-content&quot;&gt;...&lt;/div&gt;
+     &lt;!-- app-content --&gt;
+     &lt;div id=&quot;content&quot; class=&quot;app-content&quot;&gt;...&lt;/div&gt;
     
-    &lt;!-- btn-scroll-top --&gt;
-    &lt;a href=&quot;#&quot; data-click=&quot;scroll-top&quot; class=&quot;btn-scroll-top fade&quot;&gt;&lt;i class=&quot;fa fa-arrow-up&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-  &lt;/div&gt;
+     &lt;!-- btn-scroll-top --&gt;
+     &lt;a href=&quot;#&quot; data-click=&quot;scroll-top&quot; class=&quot;btn-scroll-top fade&quot;&gt;&lt;i class=&quot;fa fa-arrow-up&quot;&gt; &lt;/i&gt;&lt;/a&gt;
+   &lt;/div&gt;
   
-  &lt;!-- BEGIN core-js --&gt;
-  &lt;script src=&quot;assets/js/vendor.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;assets/js/app.min.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+   &lt;!-- BEGIN core-js --&gt;
+   &lt;script src=&quot;assets/js/vendor.min.js&quot;&gt;&lt;/script&gt;
+   &lt;script src=&quot;assets/js/app.min.js&quot;&gt;&lt;/script&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;
               </code>
            </pre>
                   </div>
+
+                  <div class="my-4">
+                     <div class="text-2xl font-bold pb-6 border-b border-gray-300 mb-6">D) CSS</div>
+                     <p class="text-sm">All the css files used in VueStudio has been compiled into one single files <span class="bg-gray-100 border border-gray-200 text-red-700 px-1 rounded">vendor.min.css</span>  and VueStudio Core CSS is compiled into <span class="bg-gray-100 border border-gray-200 text-red-700 px-1 rounded">app.min.css</span> by using gulp. If you are not using gulp, copy over the folder <span class="bg-gray-100 border border-gray-200 text-red-700 px-1 rounded">/dist/assets/css</span>  and <span class="bg-gray-100 border border-gray-200 text-red-700 px-1 rounded">/dist/assets/webfonts</span>  into your application assets folder.</p>
+                     <ol class="text-sm mt-2 ml-2">
+                        <li> 1. FontAwesome</li>
+                        <li> 2. jQuery UI</li>
+                        <li> 3. Animate.css</li>
+                        <li> 4. Pace Loader</li>
+                        <li> 5. Bootstrap</li>
+                     </ol>
+                     <pre>
+                        <code class="rounded"> &lt;!-- core-js --&gt;
+ &lt;script src=&quot;assets/js/vendor.min.js&quot;&gt;&lt;/script&gt;
+ &lt;script src=&quot;assets/js/app.min.js&quot;&gt;&lt;/script&gt;
+ 
+ &lt;!-- OR without vendor.min.js --&gt;
+ &lt;script src=&quot;assets/plugins/pace-js/pace.min.js&quot;&gt;&lt;/script&gt;
+ &lt;script src=&quot;assets/plugins/jquery/dist/jquery.min.js&quot;&gt;&lt;/script&gt;
+ &lt;script src=&quot;assets/plugins/jquery-ui-dist/jquery-ui.min.js&quot;&gt;&lt;/script&gt;
+ &lt;script src=&quot;assets/plugins/bootstrap/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+ &lt;script src=&quot;assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js&quot;&gt;&lt;/script&gt;
+ &lt;script src=&quot;assets/plugins/js-cookie/dist/js.cookie.js&quot;&gt;&lt;/script&gt;
+ &lt;script src=&quot;assets/js/app.min.js&quot;&gt;&lt;/script&gt;
+ 
+ &lt;!-- core-js required folder --&gt;
+ /dist/assets/js
+                        </code>
+                     </pre>
+                  </div>
+
+                  <div class="my-4">
+                     <div class="text-2xl font-bold pb-6 border-b border-gray-300 mb-6">E) Javascript</div>
+                     <p class="text-sm">This theme compiles 6 javascript library into one single file <span class="bg-gray-100 border border-gray-200 text-red-700 px-1 rounded">vendor.min.js</span>  and VueStudio core javascript is compiled into <span class="bg-gray-100 border border-gray-200 text-red-700 px-1 rounded">app.min.js</span> by using gulp. If you are not using gulp, copy over the folder <span class="bg-gray-100 border border-gray-200 text-red-700 px-1 rounded">/dist/assets/js</span>  into your application assets folder.</p>
+                     <ol class="text-sm mt-2 ml-2">
+                        <li> 1. Pace Loader</li>
+                        <li> 2. jQuery</li>
+                        <li> 3. jQuery UI</li>
+                        <li> 4. Bootstrap</li>
+                        <li> 5. Slimscroll</li>
+                        <li> 6. JavaScript Cookie</li>
+                     </ol>
+                     <pre>
+                        <code class="rounded"> &lt;!-- core-css --&gt;
+ &lt;link href=&quot;assets/css/vendor.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+ &lt;link href=&quot;assets/css/app.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+ 
+ &lt;!-- OR without vendor.min.css --&gt;
+ &lt;link href=&quot;assets/plugins/@fortawesome/fontawesome-free/css/all.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+ &lt;link href=&quot;assets/plugins/jquery-ui-dist/jquery-ui.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+ &lt;link href=&quot;assets/plugins/animate.css/animate.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+ &lt;link href=&quot;assets/plugins/pace-js/themes/black/pace-theme-flash.css&quot; rel=&quot;stylesheet&quot; /&gt;
+ &lt;link href=&quot;assets/css/app.min.css&quot; rel=&quot;stylesheet&quot; /&gt;
+ 
+ &lt;!-- core-css required folder --&gt;
+ /dist/assets/css
+ /dist/assets/webfonts
+                        </code>
+                     </pre>
+                  </div>
+
+                  <div class="my-4">
+                     <div class="text-2xl font-bold pb-6 border-b border-gray-300 mb-6">F) Page Options</div>
+                     <p class="text-sm font-bold">Sidebar minified:</p>
+                     <pre class="">
+                        <code class="rounded m-0"> &lt;div id=&quot;app&quot; class=&quot;app app-sidebar-minified&quot;&gt;
+  ...
+ &lt;/div&gt;
+                        </code>
+                     </pre>
+                     <p class="text-sm font-bold">Full height:</p>
+                     <pre class="">
+                        <code class="rounded m-0"> &lt;div id=&quot;app&quot; class=&quot;app app-content-full-height&quot;&gt;
+  ...
+   &lt;div id=&quot;content&quot; class=&quot;app-content&quot; data-scrollbar=&quot;true&quot; data-height=&quot;100%&quot; 
+       data-skip-mobile=&quot;true&quot;&gt;
+     ...
+   &lt;/div&gt;
+ &lt;/div&gt;
+                        </code>
+                     </pre>
+                     <p class="text-sm font-bold">Full width:</p>
+                     <pre class="">
+                        <code class="rounded m-0"> &lt;div id=&quot;app&quot; class=&quot;app app-content-full-width&quot;&gt;
+  ...
+ &lt;/div&gt;
+                        </code>
+                     </pre>
+                     <p class="text-sm font-bold">Fixed footer:</p>
+                     <pre class="">
+                        <code class="rounded m-0"> &lt;div id=&quot;app&quot; class=&quot;app app-footer-fixed&quot;&gt;
+  ...
+   &lt;div id=&quot;footer&quot; class=&quot;app-footer&quot;&gt;
+     &copy; 2022 seanTheme All Right Reserved
+   &lt;/div&gt;
+ &lt;/div&gt;
+                        </code>
+                     </pre>
+                     <p class="text-sm font-bold">Boxed Layout</p>
+                     <pre class="">
+                        <code class="rounded m-0"> &lt;body class=&quot;app-with-bg&quot;&gt;
+   &lt;div id=&quot;app&quot; class=&quot;app app-boxed-layout&quot;&gt;
+     ...
+   &lt;/div&gt;
+ &lt;/body&gt;
+                        </code>
+                     </pre>
+                  </div>
+
+
+
                   <div class="my-4 first-letter:text-3xl first-letter:text-yellow-700">Lorem ipsum dolor sit amet
                      consectetur adipisicing elit. Tempora, explicabo. Sequi, voluptatum corrupti eligendi officia
                      delectus omnis aliquam dolorum quisquam tenetur laboriosam hic, debitis incidunt illum dolor
                      aperiam quas cum perferendis sapiente soluta quod exercitationem nisi. Assumenda asperiores esse
                      voluptate autem consectetur explicabo dolor soluta sapiente nemo, accusamus minus quae veritatis,
                      fugiat dolores omnis at?</div>
-                  <div class="my-4 first-letter:text-3xl first-letter:text-sky-700">Lorem ipsum dolor sit amet
-                     consectetur adipisicing elit. Tempora, explicabo. Sequi, voluptatum corrupti eligendi officia
-                     delectus omnis aliquam dolorum quisquam tenetur laboriosam hic, debitis incidunt illum dolor
-                     aperiam quas cum perferendis sapiente soluta quod exercitationem nisi. Assumenda asperiores esse
-                     voluptate autem consectetur explicabo dolor soluta sapiente nemo, accusamus minus quae veritatis,
-                     fugiat dolores omnis at?</div>
-                  <div class="my-4 first-letter:text-3xl first-letter:text-gray-700">Lorem ipsum dolor sit amet
-                     consectetur adipisicing elit. Tempora, explicabo. Sequi, voluptatum corrupti eligendi officia
-                     delectus omnis aliquam dolorum quisquam tenetur laboriosam hic, debitis incidunt illum dolor
-                     aperiam quas cum perferendis sapiente soluta quod exercitationem nisi. Assumenda asperiores esse
-                     voluptate autem consectetur explicabo dolor soluta sapiente nemo, accusamus minus quae veritatis,
-                     fugiat dolores omnis at?</div>
-                  <div class="my-4 first-letter:text-3xl first-letter:text-red-700">Lorem ipsum dolor sit amet
-                     consectetur adipisicing elit. Tempora, explicabo. Sequi, voluptatum corrupti eligendi officia
-                     delectus omnis aliquam dolorum quisquam tenetur laboriosam hic, debitis incidunt illum dolor
-                     aperiam quas cum perferendis sapiente soluta quod exercitationem nisi. Assumenda asperiores esse
-                     voluptate autem consectetur explicabo dolor soluta sapiente nemo, accusamus minus quae veritatis,
-                     fugiat dolores omnis at?</div>
-                  <div class="my-4 first-letter:text-3xl first-letter:text-blue-700">Lorem ipsum dolor sit amet
-                     consectetur adipisicing elit. Tempora, explicabo. Sequi, voluptatum corrupti eligendi officia
-                     delectus omnis aliquam dolorum quisquam tenetur laboriosam hic, debitis incidunt illum dolor
-                     aperiam quas cum perferendis sapiente soluta quod exercitationem nisi. Assumenda asperiores esse
-                     voluptate autem consectetur explicabo dolor soluta sapiente nemo, accusamus minus quae veritatis,
-                     fugiat dolores omnis at?</div>
+                 
 
                </div>
                <div class="hidden lg:block col-span-3">
                   <div class="bg-gray-200 h-screen overflow-y-scroll flex p-3 flex-col space-y-3  sticky top-14 z-10">
-                     <a href="javascript:;">Document Item list</a>
-                     <a href="javascript:;">Document Item list</a>
+                     <a href="#installation">Installation</a>
+                     <a href="#file-structure">File Structure</a>
                      <a href="javascript:;">Document Item list</a>
                      <a href="javascript:;">Document Item list</a>
                      <a href="javascript:;">Document Item list</a>
@@ -216,8 +324,11 @@ template/
    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"
       integrity="sha512-BNc7saQYlxCL10lykUYhFBcnzdKMnjx5fp5s5wPucDyZ7rKNwCoqJh1GwEAIhuePEK4WM9askJBRsu7ma0Rzvg=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js">
+   </script>
    <script>
       hljs.highlightAll();
+      hljs.initLineNumbersOnLoad();
    </script>
 </body>
 
