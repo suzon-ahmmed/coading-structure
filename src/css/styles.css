@@ -681,6 +681,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
+.bg-slate-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
 .bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -704,10 +709,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-3 {
   padding: 0.75rem;
-}
-
-.p-0 {
-  padding: 0px;
 }
 
 .px-2 {
@@ -772,6 +773,40 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(185 28 28 / var(--tw-text-opacity));
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap');
+
+pre > code {
+  font-family: 'Fira Code', monospace;
+  font-weight: 300;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 55px  gray;
+}
+
+body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --tw-bg-opacity: 1;
+    background-color: rgb(24 24 27 / var(--tw-bg-opacity));
+  }
+}
+
 .first-letter\:text-3xl::first-letter {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -782,29 +817,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(161 98 7 / var(--tw-text-opacity));
 }
 
-.first-letter\:text-sky-700::first-letter {
-  --tw-text-opacity: 1;
-  color: rgb(3 105 161 / var(--tw-text-opacity));
-}
-
-.first-letter\:text-gray-700::first-letter {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
-.first-letter\:text-red-700::first-letter {
-  --tw-text-opacity: 1;
-  color: rgb(185 28 28 / var(--tw-text-opacity));
-}
-
-.first-letter\:text-blue-700::first-letter {
-  --tw-text-opacity: 1;
-  color: rgb(29 78 216 / var(--tw-text-opacity));
-}
-
 .hover\:text-gray-50:hover {
   --tw-text-opacity: 1;
   color: rgb(249 250 251 / var(--tw-text-opacity));
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark\:bg-slate-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+  }
 }
 
 @media (min-width: 768px) {
