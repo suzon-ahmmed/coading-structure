@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'bg-dark-code': '#1e293b',
+        'dark-code': '#1e293b',
       },
     },
     container: {
