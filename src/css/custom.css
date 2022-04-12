@@ -15,12 +15,12 @@ pre>code {
       height: 6px;
 }
 ::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.349);
+      -webkit-box-shadow: inset 0 0 22px #4b688123;
       border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb {
       border-radius: 4px;
-      -webkit-box-shadow: inset 0 0 55px #2f3b4e;
+      -webkit-box-shadow: inset 0 0 55px #71879c7c;
 }
 html {
    scroll-behavior: smooth;
