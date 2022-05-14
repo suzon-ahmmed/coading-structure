@@ -26,15 +26,29 @@
                <span class="text-3xl font-bold ml-2 text-gray-100">Coding</span>
             </a>
          </div>
-         <div class="hidden md:flex space-x-4">
+         <div class="hidden md:flex items-center space-x-4">
             <a href="javascript:;" class="hover:text-white text-gray-200">About</a>
             <a href="javascript:;" class="hover:text-white text-gray-200">Contuct</a>
             <a href="javascript:;" class="hover:text-white text-gray-200">Projects</a>
+            <button id="theme-toggle" type="button"
+               class=" text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700  dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+               <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+               </svg>
+               <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                     fill-rule="evenodd" clip-rule="evenodd"></path>
+               </svg>
+            </button>
          </div>
       </nav>
    </header>
    <main>
-      <section class="bg-cover bg-no-repeat mt-14  w-full h-60 flex flex-cal items-center" style="background-image: url(./src/images/wd.jpg);">
+      <section class="bg-cover bg-no-repeat mt-14  w-full h-60 flex flex-cal items-center"
+         style="background-image: url(./src/images/wd.jpg);">
          <div class="container px-2 md:px-0  text-center text-white">
             <div class="text-5xl font-bold ">CodeStructure</div>
             <div class="text-lg">Exace structure for all programing language</div>
@@ -531,13 +545,17 @@
             </div>
             <div>
                <div class="flex justify-end space-x-8">
-                  <a href="javaxcript:;" class="text-xl text-white hover:text-facebook w-9 h-9 flex justify-center items-center rounded-full hover:bg-slate-100 hover:ease-in-out duration-500">
+                  <a href="javaxcript:;"
+                     class="text-xl text-white hover:text-facebook w-9 h-9 flex justify-center items-center rounded-full hover:bg-slate-100 hover:ease-in-out duration-500">
                      <i class="fa-brands fa-facebook-f"></i></a>
-                  <a href="javaxcript:;" class="text-xl text-white hover:text-twiter w-9 h-9 flex justify-center items-center rounded-full hover:bg-slate-100 hover:ease-in-out duration-500">
+                  <a href="javaxcript:;"
+                     class="text-xl text-white hover:text-twiter w-9 h-9 flex justify-center items-center rounded-full hover:bg-slate-100 hover:ease-in-out duration-500">
                      <i class="fa-brands fa-twitter"></i></a>
-                  <a href="javaxcript:;" class="text-xl text-white hover:text-youtube w-9 h-9 flex justify-center items-center rounded-full hover:bg-slate-100 hover:ease-in-out duration-500">
+                  <a href="javaxcript:;"
+                     class="text-xl text-white hover:text-youtube w-9 h-9 flex justify-center items-center rounded-full hover:bg-slate-100 hover:ease-in-out duration-500">
                      <i class="fa-brands fa-youtube"></i></a>
-                  <a href="javaxcript:;" class="text-xl text-white hover:text-linkedin w-9 h-9 flex justify-center items-center rounded-full hover:bg-slate-100 hover:ease-in-out duration-500">
+                  <a href="javaxcript:;"
+                     class="text-xl text-white hover:text-linkedin w-9 h-9 flex justify-center items-center rounded-full hover:bg-slate-100 hover:ease-in-out duration-500">
                      <i class="fa-brands fa-linkedin-in"></i></a>
                </div>
             </div>
@@ -548,9 +566,10 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"
       integrity="sha512-BNc7saQYlxCL10lykUYhFBcnzdKMnjx5fp5s5wPucDyZ7rKNwCoqJh1GwEAIhuePEK4WM9askJBRsu7ma0Rzvg=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <script
-      src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js">
+   <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js">
    </script>
+   <script src="./node_modules/flowbite/dist/flowbite.js"></script>
+   <script src="./src/js/color.js"></script>
    <script src="./src/js/app.js"></script>
    <script type="text/javascript">
       $(document).ready(function () {

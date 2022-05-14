@@ -19,5 +19,8 @@
   "homepage": "https://github.com/suzon-ahmmed/coading-structure#readme",
   "devDependencies": {
     "tailwindcss": "^3.0.23"
+  },
+  "dependencies": {
+    "flowbite": "^1.4.5"
   }
 }
