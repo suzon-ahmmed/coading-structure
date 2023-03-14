@@ -1,5 +1,6 @@
 module.exports = {
   content: ["./*.html"],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -20,6 +21,7 @@ module.exports = {
 
   },
   plugins: [
-    require('flowbite/plugin')
+    // require('flowbite/plugin')
+
   ]
 }

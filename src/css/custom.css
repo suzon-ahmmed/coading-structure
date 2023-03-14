@@ -2,53 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap");
 
-pre>code {
-   font-family: 'Fira Code', monospace;
-   font-weight: 300;
-   @apply rounded-md dark:bg-dark-code dark:border dark:border-gray-600 shadow-lg !important;
+pre > code {
+  font-family: "Fira Code", monospace;
+  font-weight: 300;
+  @apply rounded-md dark:bg-dark-code dark:border dark:border-gray-600 shadow-lg !important;
 }
 
-::-webkit-scrollbar {
-      width: 6px;
-      height: 6px;
+.left-menu::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
-::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 22px #4b688123;
-      border-radius: 4px;
+.left-menu::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 22px #4b688123;
+  border-radius: 4px;
 }
-::-webkit-scrollbar-thumb {
-      border-radius: 4px;
-      -webkit-box-shadow: inset 0 0 55px #71879c7c;
+.left-menu::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 55px #71879c7c;
 }
 html {
-   scroll-behavior: smooth;
- }
+  scroll-behavior: smooth;
+}
 
 body {
-   @apply antialiased text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-900;
+  @apply antialiased text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-900;
 }
 
 .list-link {
-   @apply text-sm block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300;
+  @apply text-sm block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300;
 }
 
 .active-link {
-   @apply text-sky-500 hover:text-sky-500 border-current font-semibold dark:text-sky-400;
+  @apply text-sky-500 hover:text-sky-500 border-current font-semibold dark:text-sky-400;
 }
-.sub-list{
-   @apply text-sm pl-4 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300;
+.sub-list {
+  @apply text-sm pl-4 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300;
 }
 .sub-list:before {
-   font-family: "Font Awesome 6 Free";
-   font-weight: 900;
-   content: "\f105";
-   @apply text-xs pr-2 text-slate-300 dark:text-slate-500;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f105";
+  @apply text-xs pr-2 text-slate-300 dark:text-slate-500;
 }
 .sub-list:hover:before {
-   @apply text-gray-700 dark:text-slate-300;
+  @apply text-gray-700 dark:text-slate-300;
 }
-.active-sub-list{
-   @apply text-sky-500 hover:text-sky-500 font-semibold dark:text-sky-400;
+.active-sub-list {
+  @apply text-sky-500 hover:text-sky-500 font-semibold dark:text-sky-400;
 }
